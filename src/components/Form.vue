@@ -17,7 +17,7 @@
           <label for="bread">Escolha o pão:</label>
           <select name="bread" id="bread" v-model="bread">
             <option value="">Selecione o seu pão</option>
-            <option value="integral">Integral</option>
+            <option v-for="bread in paes" :key="bread.id" :value="bread.tipo">{{ bread.tipo }}</option>
           </select>
         </div>
         <div class="input-container">
@@ -52,6 +52,32 @@
 <script>
 export default {
   name: "Form",
+  data() {
+    return {
+      paes: null,
+      carnes: null,
+      opcionaisdata: null,
+      nome: null,
+      pao: null,
+      carne: null,
+      opcionais: [],
+      status: "Solicitado",
+      msg: null,
+    };
+  },
+  methods: {
+    async getIngredients() {
+      const req = await fetch("http://localhost:3000/ingredientes");
+      const data = await req.json();
+
+      this.paes = data.paes;
+      this.carnes = data.carnes;
+      this.opcionaisdata = data.opcionais;
+    },
+  },
+  mounted() {
+    this.getIngredients();
+  },
 };
 </script>
 

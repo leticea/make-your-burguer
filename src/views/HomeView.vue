@@ -2,17 +2,19 @@
   <Banner />
   <div class="main-container">
     <h1>Monte o seu burguer:</h1>
-    <p>formulário</p>
+    <Form />
   </div>
 </template>
 
 <script>
 import Banner from "../components/Banner.vue";
+import Form from "../components/Form.vue";
 
 export default {
   name: "Home",
   components: {
     Banner,
+    Form
   },
 };
 </script>

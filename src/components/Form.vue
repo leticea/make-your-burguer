@@ -24,21 +24,21 @@
           <label for="bread">Escolha a carne do seu Burguer:</label>
           <select name="meat" id="meat" v-model="meat">
             <option value="">Selecione o tipo de carne</option>
-            <option value="maminha">Maminha</option>
+            <option v-for="meat in carnes" :key="meat.id" :value="meat.tipo">{{ meat.tipo }}</option>
           </select>
         </div>
         <div id="optional-container" class="input-container">
           <label id="optional-title" for="optional"
             >Selecione os opcionais:</label
           >
-          <div class="checkbox-container">
+          <div class="checkbox-container" v-for="optional in opcionaisdata" :key="optional.id">
             <input
               type="checkbox"
               name="optional"
-              v-model="optional"
-              value="salame"
+              v-model="opcionais"
+              :value="optional.tipo"
             />
-            <span>Salame</span>
+            <span>{{optional.tipo}}</span>
           </div>
         </div>
         <div class="input-container">

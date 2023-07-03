@@ -107,6 +107,9 @@ export default {
       // colocar uma msg do sistema
       this.msg = `Pedido Nº ${res.id} realizado com sucesso`;
 
+      // limpar a mensagem
+      setTimeout(() => (this.msg = ""), 3000);
+
       // limpar os campos
       this.nome = "";
       this.pao = "";

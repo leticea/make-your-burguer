@@ -110,6 +110,19 @@
       ],
       "status": "Solicitado",
       "id": 3
+    },
+    {
+      "nome": "João",
+      "pao": "Parmesão e Orégano",
+      "carne": "Picanha",
+      "opcionais": [
+        "Cheddar",
+        "Bacon",
+        "Cebola roxa",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }

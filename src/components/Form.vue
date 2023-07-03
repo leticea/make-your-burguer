@@ -2,7 +2,7 @@
   <div>
     <p>Componente de Mensagem</p>
     <div>
-      <form id="burger-form">
+      <form id="burger-form" @submit="createBurger">
         <div class="input-container">
           <label for="name">Nome do cliente</label>
           <input
@@ -17,28 +17,36 @@
           <label for="bread">Escolha o pão:</label>
           <select name="bread" id="bread" v-model="bread">
             <option value="">Selecione o seu pão</option>
-            <option v-for="bread in paes" :key="bread.id" :value="bread.tipo">{{ bread.tipo }}</option>
+            <option v-for="bread in paes" :key="bread.id" :value="bread.tipo">
+              {{ bread.tipo }}
+            </option>
           </select>
         </div>
         <div class="input-container">
           <label for="bread">Escolha a carne do seu Burguer:</label>
           <select name="meat" id="meat" v-model="meat">
             <option value="">Selecione o tipo de carne</option>
-            <option v-for="meat in carnes" :key="meat.id" :value="meat.tipo">{{ meat.tipo }}</option>
+            <option v-for="meat in carnes" :key="meat.id" :value="meat.tipo">
+              {{ meat.tipo }}
+            </option>
           </select>
         </div>
         <div id="optional-container" class="input-container">
           <label id="optional-title" for="optional"
             >Selecione os opcionais:</label
           >
-          <div class="checkbox-container" v-for="optional in opcionaisdata" :key="optional.id">
+          <div
+            class="checkbox-container"
+            v-for="optional in opcionaisdata"
+            :key="optional.id"
+          >
             <input
               type="checkbox"
               name="optional"
               v-model="opcionais"
               :value="optional.tipo"
             />
-            <span>{{optional.tipo}}</span>
+            <span>{{ optional.tipo }}</span>
           </div>
         </div>
         <div class="input-container">
@@ -61,7 +69,6 @@ export default {
       pao: null,
       carne: null,
       opcionais: [],
-      status: "Solicitado",
       msg: null,
     };
   },
@@ -73,6 +80,19 @@ export default {
       this.paes = data.paes;
       this.carnes = data.carnes;
       this.opcionaisdata = data.opcionais;
+    },
+    async createBurger(e) {
+      e.preventDefault();
+
+      const data = {
+        nome: this.name,
+        carne: this.meat,
+        pao: this.bread,
+        opcionais: Array.from(this.opcionais),
+        status: "Solicitado",
+      };
+
+      console.log(data);
     },
   },
   mounted() {

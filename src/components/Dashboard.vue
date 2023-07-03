@@ -11,15 +11,14 @@
       </div>
     </div>
     <div id="burger-table-rows">
-      <div class="burger-table-row">
-        <div class="order-number">1</div>
-        <div>João</div>
-        <div>Pão de trigo</div>
-        <div>Maminha</div>
+      <div class="burger-table-row" v-for="burger in burgers" :key="burger.id">
+        <div class="order-number">{{ burger.id }}</div>
+        <div>{{ burger.nome }}</div>
+        <div>{{ burger.pao }}</div>
+        <div>{{ burger.carne }}</div>
         <div>
           <ul>
-            <li>Salame</li>
-            <li>Tomate</li>
+            <li v-for="(opcional, index) in burger.opcionais" :key="index">{{ opcional }}</li>
           </ul>
         </div>
         <div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Message />
+    <Message :msg="msg" v-show="msg" />
     <div>
       <form id="burger-form" method="POST" @submit="createBurger">
         <div class="input-container">
@@ -104,6 +104,10 @@ export default {
 
       const res = await req.json();
 
+      // colocar uma msg do sistema
+      this.msg = `Pedido Nº ${res.id} realizado com sucesso`;
+
+      // limpar os campos
       this.nome = "";
       this.pao = "";
       this.carne = "";
@@ -128,6 +132,8 @@ export default {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+
+  /* border: 1px solid red; */
 }
 
 label {
@@ -136,12 +142,18 @@ label {
   color: #222;
   padding: 5px 10px;
   border-left: 4px solid #fcba03;
+  margin-left: 30px;
+
+  /* border: 1px solid red; */
 }
 
 input,
 select {
   padding: 5px 10px;
   width: 300px;
+  margin-left: 30px;
+
+  /* border: 1px solid red; */
 }
 
 #optional-container {
@@ -181,6 +193,7 @@ select {
   cursor: pointer;
   transition: 0.5s;
   border-radius: 6px;
+  position: inherit;
 }
 
 .submit-btn:hover {

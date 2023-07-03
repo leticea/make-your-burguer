@@ -36,6 +36,25 @@
 <script>
 export default {
   name: "Dashboard",
+  data() {
+    return {
+      burgers: null,
+      burger_id: null,
+      status: [],
+    };
+  },
+  methods: {
+    async getRequests() {
+      const req = await fetch("http://localhost:3000/burgers");
+      const data = await req.json();
+      this.burgers = data;
+
+      console.log(this.burgers);
+    },
+  },
+  mounted() {
+    this.getRequests();
+  },
 };
 </script>
 

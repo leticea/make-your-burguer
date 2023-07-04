@@ -100,31 +100,6 @@
       "id": 2
     },
     {
-      "nome": "Leticia Nascimento",
-      "pao": "Integral",
-      "carne": "Veggie burger",
-      "opcionais": [
-        "Pepino",
-        "Tomate",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 3
-    },
-    {
-      "nome": "João",
-      "pao": "Parmesão e Orégano",
-      "carne": "Picanha",
-      "opcionais": [
-        "Cheddar",
-        "Bacon",
-        "Cebola roxa",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
       "nome": "Maria",
       "pao": "3 Queijos",
       "carne": "Veggie burger",
@@ -132,8 +107,31 @@
         "Cebola roxa",
         "Tomate"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 5
+    },
+    {
+      "nome": "Leila",
+      "pao": "Italiano Branco",
+      "carne": "Picanha",
+      "opcionais": [
+        "Cebola roxa",
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Em produção",
+      "id": 6
+    },
+    {
+      "nome": "Juliana",
+      "pao": "Integral",
+      "carne": "Veggie burger",
+      "opcionais": [
+        "Cebola roxa",
+        "Tomate"
+      ],
+      "status": "Em produção",
+      "id": 7
     }
   ]
 }

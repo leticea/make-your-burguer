@@ -188,6 +188,7 @@ select {
   cursor: pointer;
   transition: 0.5s;
   border-radius: 6px;
+  width: 85%;
 }
 
 .submit-btn:hover {

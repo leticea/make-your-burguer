@@ -50,7 +50,15 @@ export default {
       const data = await req.json();
       this.burgers = data;
 
-      console.log(this.burgers);
+      // console.log(this.burgers);
+
+      // resgatar o status
+      this.getStatus();
+    },
+    async getStatus() {
+      const req = await fetch("http://localhost:3000/status");
+      const data = await req.json();
+      this.status = data;
     },
   },
   mounted() {

@@ -16,7 +16,6 @@
         <div class="input-container">
           <label for="pao">Escolha o pão:</label>
           <select name="pao" id="pao" v-model="pao">
-            <option value="">Selecione o seu pão</option>
             <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">
               {{ pao.tipo }}
             </option>
@@ -25,7 +24,6 @@
         <div class="input-container">
           <label for="carne">Escolha a carne do seu Burguer:</label>
           <select name="carne" id="carne" v-model="carne">
-            <option value="">Selecione o tipo de carne</option>
             <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">
               {{ carne.tipo }}
             </option>
@@ -135,8 +133,6 @@ export default {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-
-  /* border: 1px solid red; */
 }
 
 label {
@@ -145,18 +141,14 @@ label {
   color: #222;
   padding: 5px 10px;
   border-left: 4px solid #fcba03;
-  margin-left: 30px;
-
-  /* border: 1px solid red; */
+  margin-left: 40px;
 }
 
 input,
 select {
   padding: 5px 10px;
   width: 300px;
-  margin-left: 30px;
-
-  /* border: 1px solid red; */
+  margin-left: 40px;
 }
 
 #optional-container {
@@ -196,7 +188,6 @@ select {
   cursor: pointer;
   transition: 0.5s;
   border-radius: 6px;
-  position: inherit;
 }
 
 .submit-btn:hover {

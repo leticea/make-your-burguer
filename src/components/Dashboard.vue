@@ -87,7 +87,6 @@ export default {
 
       // colocar uma msg do sistema
       this.msg = `Pedido removido com sucesso!`;
-
       // limpar a mensagem
       setTimeout(() => (this.msg = ""), 3000);
 
@@ -107,11 +106,8 @@ export default {
 
       // colocar uma msg do sistema
       this.msg = `O Pedido Nº ${res.id} foi atualizado para ${res.status}!`;
-
       // limpar a mensagem
       setTimeout(() => (this.msg = ""), 3000);
-
-      console.log(res);
     },
   },
   mounted() {
@@ -161,6 +157,7 @@ export default {
 select {
   padding: 12px 6px;
   margin-right: 12px;
+  border-radius: 4px;
 }
 
 .delete-btn {
@@ -171,6 +168,7 @@ select {
   padding: 10px;
   font-size: 16px;
   margin: 0 auto;
+  border-radius: 4px;
   cursor: pointer;
   transition: 0.5s;
 }

@@ -86,7 +86,7 @@
         "Bacon",
         "Pepino"
       ],
-      "status": "Em produção",
+      "status": "Finalizado",
       "id": 1
     },
     {
@@ -111,17 +111,6 @@
       ],
       "status": "Finalizado",
       "id": 6
-    },
-    {
-      "nome": "Juliana",
-      "pao": "Integral",
-      "carne": "Veggie burger",
-      "opcionais": [
-        "Cebola roxa",
-        "Tomate"
-      ],
-      "status": "Em produção",
-      "id": 7
     }
   ]
 }

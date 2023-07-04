@@ -105,7 +105,7 @@ export default {
       const res = await req.json();
 
       // colocar uma msg do sistema
-      this.msg = `Pedido Nº ${res.id} realizado com sucesso`;
+      this.msg = `Pedido Nº ${res.id} realizado com sucesso!`;
 
       // limpar a mensagem
       setTimeout(() => (this.msg = ""), 3000);

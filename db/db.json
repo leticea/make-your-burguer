@@ -86,18 +86,8 @@
         "Bacon",
         "Pepino"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 1
-    },
-    {
-      "nome": "Leticia Nascimento",
-      "pao": "Italiano Branco",
-      "carne": "Picanha",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 2
     },
     {
       "nome": "Maria",
@@ -119,7 +109,7 @@
         "Cheddar",
         "Tomate"
       ],
-      "status": "Em produção",
+      "status": "Finalizado",
       "id": 6
     },
     {
